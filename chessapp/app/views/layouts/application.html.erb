@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chessapp</title>
+    <title> <%= content_for(:title) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,10 +10,13 @@
   </head>
 
   <body>
-    <ul class='menu'>
-      <li><%= link_to 'В игру!', game_path %></li>
-      <li><%= link_to 'Домой', root_path %></li>
-      <li><%= link_to 'Список лидеров', champions_path %></li>
+    <ul class='menu'><hr></hr><p>
+      <li><a href="/game"><img src="assets/game.png" width="50" height="50"></a></li>
+      <li><a href="/champions"><img src="assets/champions.png" width="50" height="50"></a></li>
+      <li><a href="/"><img src="assets/rules.png" width="50" height="50"></a></li>
+      </p>
+
+      <hr></hr>
     </ul>
     <%= yield %>
   </body>

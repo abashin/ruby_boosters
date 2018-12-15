@@ -11,4 +11,7 @@ class UserController < ApplicationController
   end
   def champions
   end
+  def show
+    @user = Player.find(params[:id])
+  end
 end

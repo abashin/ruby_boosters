@@ -2,7 +2,20 @@
     text-align: center;
 }
 
+
+.zaz {
+    text-align: center;
+}
+
+hr {
+    border: none;
+    background-color: red;
+    color: red;
+    height: 2px;
+}
+
 .menu li {
     display: inline;
     margin: 0px 10px;
+
 }
