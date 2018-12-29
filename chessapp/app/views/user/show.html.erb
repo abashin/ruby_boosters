@@ -1,7 +1,8 @@
-<title> <%= content_for(:title) { "kk" } %></title>
+<title> <%= content_for(:title) { "#{@player.name} #{@player.lastname}" } %></title>
 <h1><%= "Это страница о таком великом шахматисте как #{@player.name} #{@player.lastname}" %></h1>
 <body>
 <div> <%= "#{@player.name} #{@player.lastname}" %> </div>
-<div> Годы чемпионства: <%= "#{@player.start} - #{@player.stop}" %></div>
-<div> Годы жизни: <%= "#{@player.birth} - #{@player.dead}" %></div>
-<%= image_tag @player.image, height: '300px' %>
+<div> Годы чемпионства: <%= "#{@player.start.to_s} - #{@player.stop.to_s}" %></div>
+<div> Годы жизни: <%= "#{@player.birth.to_s} - #{@player.dead.to_s}" %></div>
+<%= image_tag "#{@player.image}", height: '300px' %>
+</body>

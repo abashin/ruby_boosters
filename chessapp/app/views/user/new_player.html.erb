@@ -1,0 +1,19 @@
+<h1>Здесь вы можете создать нового игрока</h1>
+<form action="new_player">
+  <input type="text" name="name">
+  <input type="text" name="lastname">
+  <input type="text" name="birth">
+  <input type="text" name="dead">
+  <input type="text" name="start">
+  <input type="text" name="stop">
+  <input type="submit">
+</form>
+<%= form_for :player; url :create_player_path do |form| %>
+  <%= form.text_field :name %>
+  <%= form.text_field :lastname %>
+  <%= form.text_field :birth %>
+  <%= form.text_field :dead %>
+  <%= form.text_field :start %>
+  <%= form.text_field :stop %>
+  <%= form.sumbit %>
+<% end %>
